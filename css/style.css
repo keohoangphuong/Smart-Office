@@ -1649,6 +1649,12 @@ form label {
 .fh5co-project-item figure {
   height: 240px;
   overflow: hidden;
+  z-index: 13;
+  position: relative;
+}
+.system_diagrams {
+  height: 300px;
+  overflow: hidden;
   z-index: 12;
   position: relative;
 }
