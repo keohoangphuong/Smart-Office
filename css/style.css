@@ -1853,4 +1853,71 @@ form label {
   }
 }
 
+.menu-bar {
+    box-shadow: none;
+    /* background: transparent; */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 46px;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.input-group-addon-1 {
+    padding: 10.5px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555555;
+    text-align: center;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    float: left;
+}
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.img-devices {
+  width: 20%;
+  height: 20%;
+}
+
+.img-devices-cell {
+  width: 10%;
+  height: 10%;
+}
+
+.img-devices-cell-1 {
+  width: 10%;
+  height: 10%;
+  padding: 5px;
+}
+
+.div-devices-cell {
+  border: 1px solid gray;
+}
+
+.h1-info {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.h1-name-cell{
+  padding-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=style.css.map */
