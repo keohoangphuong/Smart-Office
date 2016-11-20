@@ -1920,4 +1920,17 @@ form label {
   font-weight: bold;
 }
 
+.img-devices-cell-2 {
+  float: left; 
+  width: 18%;
+}
+.img-devices-cell-3 {
+  float: left; 
+  width: 40%;
+}
+.img-devices-cell-5 {
+  float: left; 
+  width: 24%;
+}
+
 /*# sourceMappingURL=style.css.map */
