@@ -746,7 +746,7 @@ form label {
 #gtco-subscribe,
 #gtco-footer,
 .gtco-section {
-  padding: 7em 0;
+  padding: 2em 0;
   clear: both;
   position: relative;
 }
@@ -1657,6 +1657,9 @@ form label {
   overflow: hidden;
   z-index: 13;
   position: relative;
+}
+.figure-guide {
+  height: 600px;
 }
 .system_diagrams {
   height: 300px;

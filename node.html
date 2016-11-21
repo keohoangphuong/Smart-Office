@@ -50,6 +50,86 @@
 
 	</head>
 	<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	      <!-- Modal content-->
+	      	<div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		          	<h4 class="modal-title">Add node</h4>
+		        </div>
+		        <div class="modal-body">
+		          	<form>
+			          	<div class="form-group">
+					    	<label for="pwd">Name:</label>
+					    	<input type="password" class="form-control" id="pwd">
+					  	</div>
+				  		<div class="form-group">
+				    		<label for="email">N_MAC:</label>
+				    		<input type="email" class="form-control" id="email">
+				  		</div>
+				  		<div class="form-group">
+				    		<label for="email">G_MAC:</label>
+				    		<input type="email" class="form-control" id="email">
+				  		</div>
+				  		<div class="form-group">
+				    		<label for="pwd">Key:</label>
+				    		<input type="password" class="form-control" id="pwd">
+				  		</div>
+					</form>
+	        	</div>
+	        	<div class="modal-footer">
+	          		<button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+	        	</div>
+	     	</div>
+	    </div>
+  	</div>
+
+  <!-- Modal Change name-->
+	<div class="modal fade" id="editModal" role="dialog">
+	    <div class="modal-dialog">
+	      <!-- Modal content-->
+	      	<div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		          	<h4 class="modal-title">Change name</h4>
+		        </div>
+		        <div class="modal-body">
+		        	<form>
+		          		<div class="form-group">
+				    		<label for="pwd">New Name:</label>
+				    		<input type="password" class="form-control" id="pwd">
+				  		</div>
+					</form>
+		        </div>
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+		        </div>
+	      	</div>
+	      
+	    </div>
+ 	</div>
+
+ 	<!-- Modal Delete-->
+  	<div class="modal fade" id="deleteModal" role="dialog">
+    	<div class="modal-dialog modal-sm">
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<center>
+          				<h4 class="modal-title">Do you want delete ?</h4>
+          			</center>
+          			
+       			</div>
+        		<div class="modal-footer">
+          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          			<button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+        		</div>
+      		</div>
+   		</div>
+  	</div>
 		
 	<div class="gtco-loader"></div>
 	
@@ -84,38 +164,30 @@
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
 					<a data-toggle="modal" data-target="#myModal" class="fh5co-project-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="images/add-button-2.png" alt="Image" class="img-responsive">
+						<figure style="height: 300px;">
+							<!-- <div class="overlay"><i class="ti-plus"></i></div> -->
+							<img src="images/add-button-1.png" alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
 							<h2>Add Node</h2>
-							<p>Touch to add a new node for system</p>
+							<p>Touch to add a new node for Gateway to control</p>
 						</div>
 					</a>
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6">
 					<a href="devices.html" class="fh5co-project-item">
-						<figure>
+						<figure style="height: 300px;">
 							<!-- <div class="overlay"><i class="ti-plus"></i></div> -->
 							<img src="images/home.png" alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
 							<h2>Node 1</h2>
 							<p>10 devices</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="devices.html" class="fh5co-project-item">
-						<figure>
-							<!-- <div class="overlay"><i class="ti-plus"></i></div> -->
-							<img src="images/home.png" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Contextual Control</h2>
-							<p>Automation base on your setting or environment status.</p>
+							<div>
+								<input data-toggle="modal" data-target="#editModal" type="image" src="images/edit.png" alt="Submit" width="40" height="40" style="float: left; margin-left: 10px; padding: 5px;">
+								<input data-toggle="modal" data-target="#deleteModal" type="image" src="images/delete.png" alt="Submit" width="40" height="40" style="float: right; margin-right: 10px; padding: 5px;">
+							</div>
 						</div>
 					</a>
 				</div>
