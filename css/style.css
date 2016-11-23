@@ -1935,5 +1935,10 @@ form label {
   float: left; 
   width: 24%;
 }
-
+.text-center{
+  text-align: center;
+}
+.img-size {
+  width: 40px;
+}
 /*# sourceMappingURL=style.css.map */
