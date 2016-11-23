@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link type="text/css" href="css/bootstrap-timepicker.min.css" />
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -50,69 +51,67 @@
 
 	</head>
 	<body>
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-	    <div class="modal-dialog">
-	      <!-- Modal content-->
-	      	<div class="modal-content">
-		        <div class="modal-header">
-		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
-		          	<h4 class="modal-title">Add node</h4>
-		        </div>
-		        <div class="modal-body">
-		          	<form>
-			          	<div class="form-group">
-					    	<label for="pwd">Name:</label>
-					    	<input type="password" class="form-control" id="pwd">
-					  	</div>
-				  		<div class="form-group">
-				    		<label for="email">N_MAC:</label>
-				    		<input type="email" class="form-control" id="email">
-				  		</div>
-				  		<div class="form-group">
-				    		<label for="email">G_MAC:</label>
-				    		<input type="email" class="form-control" id="email">
-				  		</div>
-				  		<div class="form-group">
-				    		<label for="pwd">Key:</label>
-				    		<input type="password" class="form-control" id="pwd">
-				  		</div>
-					</form>
-	        	</div>
-	        	<div class="modal-footer">
-	          		<button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
-	        	</div>
-	     	</div>
-	    </div>
-  	</div>
+<!-- Modal -->
+	<div class="modal fade" id="changeModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    				<center>
+    					<h2 id="myModalLabel" style="font-weight: bold;">Change value</h2>
+    				</center>
+  				</div>
+  				<div class="modal-body">
+  					<div>
+  						<center>
+  							<h3>Min</h3>
+  						</center>
+  					</div>
+  					<div>
+  						<input type="text" class="form-control" id="min">
+  					</div>
+  					<div style="margin-top: 20px;">
+  						<center>
+  							<h3>Max</h3>
+  						</center>
+  					</div>
+  					<div>
+  						<input type="text" class="form-control" id="max">
+  					</div>
+  					<div style="margin-top: 20px;">
+  						<center>
+  							<h3>Time start</h3>
+  						</center>
+  					</div>
+    				<div class="input-group bootstrap-timepicker timepicker">
+            			<input id="timepicker1" type="text" class="form-control input-small">
+            			<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+       				</div>
+       				<div style="margin-top: 20px;">
+  						<center>
+  							<h3>Time End</h3>
+  						</center>
+  					</div>
+       				<div class="input-group bootstrap-timepicker timepicker">
+            			<input id="timepicker1" type="text" class="form-control input-small">
+            			<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+       				</div>
+       		 	<script type="text/javascript">
+					$('#timepicker1').timepicker();
+        		</script>
+  			</div>
+  				<div class="modal-footer">
+  					<center>
+  						<button class="btn" data-dismiss="modal" aria-hidden="true" style="background-color: red;color: black;">Save</button>
+  					</center>
+    				
+  				</div>
+			</div>
+		</div>
+	</div>
 
-  <!-- Modal Change name-->
-	<div class="modal fade" id="editModal" role="dialog">
-	    <div class="modal-dialog">
-	      <!-- Modal content-->
-	      	<div class="modal-content">
-		        <div class="modal-header">
-		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
-		          	<h4 class="modal-title">Change name</h4>
-		        </div>
-		        <div class="modal-body">
-		        	<form>
-		          		<div class="form-group">
-				    		<label for="pwd">New Name:</label>
-				    		<input type="password" class="form-control" id="pwd">
-				  		</div>
-					</form>
-		        </div>
-		        <div class="modal-footer">
-		          	<button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
-		        </div>
-	      	</div>
-	      
-	    </div>
- 	</div>
-
- 	<!-- Modal Delete-->
-  	<div class="modal fade" id="deleteModal" role="dialog">
+	<!-- Modal Delete-->
+  	<div class="modal fade" id="editModal" role="dialog">
     	<div class="modal-dialog modal-sm">
       		<div class="modal-content">
         		<div class="modal-header">
@@ -120,11 +119,17 @@
           			<center>
           				<h4 class="modal-title">Do you want delete ?</h4>
           			</center>
-          			
+       			</div>
+       			<div class="modal-body">
+       				<center>
+       					<input type="number" name="points" step="1" value="10">
+       				</center>
+					
        			</div>
         		<div class="modal-footer">
-          			<button type="button" class="btn btn-success" data-dismiss="modal" style="float: left;">Cancel</button>
-          			<button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Delete</button>
+          			<center>
+  						<button class="btn" data-dismiss="modal" aria-hidden="true" style="background-color: red;color: black;">Save</button>
+  					</center>
         		</div>
       		</div>
    		</div>
@@ -157,42 +162,10 @@
 		</div>
 	</nav>
 
-	<div id="gtco-features" class="border-bottom" style="padding-top: 100px;">
-		<div class="gtco-container">
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a data-toggle="modal" data-target="#myModal" class="fh5co-project-item">
-						<figure style="height: 300px;">
-							<!-- <div class="overlay"><i class="ti-plus"></i></div> -->
-							<img src="images/add-button-1.png" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Add Gateway</h2>
-							<p>Touch to add a new gateway for system to control</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div href="node.html" class="fh5co-project-item">
-						<figure style="height: 300px;">
-							<a href="node.html">
-								<img src="images/gateway.jpg" alt="Image" class="img-responsive">
-							</a>
-						</figure>
-						<div class="fh5co-text">
-							<h2>Gateway 1</h2>
-							<p>10 devices</p>
-							<div>
-								<input data-toggle="modal" data-target="#editModal" type="image" src="images/edit.png" alt="Submit" width="40" height="40" style="float: left; margin-left: 10px; padding: 5px;">
-								<input data-toggle="modal" data-target="#deleteModal" type="image" src="images/delete.png" alt="Submit" width="40" height="40" style="float: right; margin-right: 10px; padding: 5px;">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="row" style="padding-top: 100px;">
+		<center>
+			<h1 style="font-size: -webkit-xxx-large; font-style: inherit; font-weight: bold; color: cadetblue;">Node 1</h1>
+		</center>
 	</div>
 
 	<footer id="gtco-footer" role="contentinfo">
@@ -279,6 +252,8 @@
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
+	<script src="js/bootstrap-timepicker.js"></script>
+    <script src="js/bootstrap-timepicker.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
