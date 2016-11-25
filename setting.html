@@ -225,6 +225,38 @@
       		</div>
       	</div>
     </div>
+
+    <!-- Modal Profile-->
+  	<div class="modal fade" id="profileModal" role="dialog">
+    	<div class="modal-dialog">
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal" style="float: left;">&times;</button>
+          			<center>
+          				<img src="images/profile.png" style="width: 50%">
+          				<h2 class="modal-title" style="font-weight: bold;">keo hoang phuong</h2>
+          			</center>
+       			</div>
+       			 <div class="modal-body" style="height: 75px;">
+       			 	<!-- <img src="images/broker.png" style="float: left;"> -->
+       			 	<div class="input-group col-md-8 col-xs-6" style="float: left;">
+       			 		<span class="input-group-addon"><i class="fa fa-arrows fa" aria-hidden="true"></i></span>
+       			 		<input type="text" class="form-control" id="broker" style="text-align: center;" value="iot.eclipse.org">
+       			 	</div>
+       			 	<div class="col-md-4 col-xs-6" style="float: right;">
+       			 		<button class="btn btn-success" style="height: 46px;">Change broker</button>
+       			 	</div>
+
+       			 </div>
+        		<div class="modal-footer">
+        			<center>
+        				<button type="button" class="btn btn-success" data-dismiss="modal" style="float: left;">Change password</button>
+        				<button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Logout</button>
+        			</center>
+        		</div>
+      		</div>
+   		</div>
+  	</div>
 		
 	<div class="gtco-loader"></div>
 	
@@ -245,7 +277,7 @@
 						<li><a href="tour.html">Guide</a></li>
 						<li><a href="contact.html">Contact</a></li>
 						<li class="btn-cta active"><a href="gateway.html"><span>Get started</span></a></li>
-						<li id="user"><a href="#">User name</a></li>
+						<li id="user"><a href="#profileModal" data-toggle="modal">User name</a></li>
 					</ul>
 				</div>
 			</div>
